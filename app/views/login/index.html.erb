@@ -1,0 +1,23 @@
+
+
+<div class="wrapper">
+  <%= form_tag("/login", class: "login") do %>
+    <p class="title">Log in</p>
+    <% if flash[:notice] != nil %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+    <input class="input" type="text" name="name" value="<%= @name %>" placeholder="Username" autofocus/>
+    <i class="fa fa-user"></i>
+    <input class="input" type="password" name="password" value="<%= @password %>" placeholder="Password" />
+    <i class="fa fa-key"></i>
+
+    <button class="submitButton" >
+      <i class="spinner"></i>
+      <span class="state">Log in</span>
+    </button>
+  <% end %>
+  <footer><a target="blank" href="http://boudra.me/">boulogindra.me</a></footer>
+  </p>
+</div>
