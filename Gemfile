@@ -49,10 +49,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Use sqlite3 as the database for Active Record
 # 開発・テスト環境ではSQLite3を使う
-group :development, :test do
   gem 'sqlite3'
-end
-# 本番環境ではPostgresqlを使う
-group :production do
-  gem 'pg', '0.20.0'
-end
